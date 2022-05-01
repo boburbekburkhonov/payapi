@@ -1,1 +1,190 @@
 // bu yerda header bor
+.header {
+  padding-top: 40px;
+  padding-bottom: 74px;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__link-logo {
+    text-decoration: none;
+    flex-shrink: 0;
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.4;
+    }
+  }
+
+  &__button {
+    margin-left: 500px;
+  }
+
+  &__hamburger {
+    display: none;
+    border: none;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    background-image: url(../images/bars-solid.svg);
+    background-size: cover;
+    width: 20px;
+    height: 20px;
+  }
+
+}
+
+.sitenav {
+  display: flex;
+  align-items: center;
+
+  &__list {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__item + &__item {
+    margin-left: 40px;
+  }
+
+  &__link {
+    text-decoration: none;
+    font-family: 'Public Sans';
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 18px;
+    color: #36536B;
+    mix-blend-mode: normal;
+    opacity: 0.7;
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.4;
+    }
+  }
+
+}
+
+@media only screen and (max-width: 1090px) {
+
+  .header {
+
+
+
+    &__button {
+      margin-left: 300px;
+    }
+
+  }
+
+}
+
+@media only screen and (max-width: 890px) {
+
+  .header {
+
+    &__button {
+      margin-left: 100px;
+    }
+
+  }
+
+  .sitenav {
+
+    &__item + &__item {
+      margin-left: 20px;
+    }
+
+  }
+
+}
+
+@media only screen and (max-width: 890px) {
+
+  .header {
+
+    &__button {
+      margin-left: 50px;
+    }
+
+  }
+
+  .sitenav {
+
+    &__item + &__item {
+      margin-left: 10px;
+    }
+
+  }
+
+}
+
+@media only screen and (max-width: 575px) {
+
+  .header {
+    position: relative;
+
+    &__hamburger {
+      display: inline-block;
+    }
+
+    &__button {
+      margin-left: 0;
+      max-width: 252px;
+      width: 100%;
+      text-align: center;
+    }
+
+  }
+
+  .sitenav {
+    display: none;
+
+    &__item + &__item {
+      margin-left: 0px;
+      margin-top: 32px;
+    }
+
+    &__link {
+      font-size: 20px;
+      line-height: 24px;
+      color: #FBFCFE;
+    }
+  }
+
+  .header--open .sitenav {
+    padding-top: 140px;
+    padding-bottom: 312px;
+    position: absolute;
+    top: 10%;
+    width: 88%;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    background: #1B262F;
+    box-shadow: 10px 10px 25px -10px rgba(54, 83, 107, 0.25);
+  }
+
+  .header--open .sitenav__list {
+    flex-direction: column;
+    margin-bottom: 32px;
+  }
+
+  .header--open .header__hamburger {
+    background-image: url(../images/x-marks.svg);
+    background-size: contain;
+    z-index: 99;
+  }
+
+}
