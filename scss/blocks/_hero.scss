@@ -1,1 +1,162 @@
 // bu yerda hero bor
+
+.hero {
+
+  &__wrapper {
+    background-image: url(../images/Bitmap.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: calc(50% + 400px);
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__desc {
+    max-width: 546px;
+    margin: 0;
+    margin-bottom: 40px;
+    font-family: 'DM Serif Display';
+    font-size: 72px;
+    line-height: 72px;
+    letter-spacing: -0.553846px;
+    color: #36536B;
+  }
+
+  &__input {
+    max-width: 272px;
+    width: 100%;
+    padding: 15px;
+    background: #FBFCFE;
+    box-shadow: 10px 10px 25px -10px rgba(54, 83, 107, 0.25);
+    border-radius: 24px;
+    border: none;
+
+    &:focus {
+      outline: none;
+      border: transparent;
+    }
+
+    &::placeholder {
+      padding-left: 27px;
+      font-family: 'Public Sans';
+      font-weight: 700;
+      font-size: 15px;
+      line-height: 18px;
+      color: #36536B;
+      opacity: 0.5;
+    }
+  }
+
+  &__desc-small {
+    margin: 0;
+    margin-top: 16px;
+    font-family: 'Public Sans';
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    color: #6C8294;
+  }
+
+  &__span {
+    font-family: 'Public Sans';
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 18px;
+    color: #6C8294;
+  }
+
+}
+
+@media only screen and (max-width: 910px) {
+
+  .hero {
+    padding-top: 50px;
+
+    &__desc {
+      font-size: 62px;
+      line-height: 62px;
+      margin-bottom: 30px;
+    }
+
+  }
+
+}
+
+@media only screen and (max-width: 768px) {
+
+  .hero {
+    padding-bottom: 100px;
+
+    &__wrapper {
+      background-image: url(../images/bitmap-tablet.png);
+      background-position: center top;
+    }
+
+    &__container {
+      flex-direction: column;
+    }
+
+    &__left {
+      order: 2;
+      max-width: 573px;
+    }
+
+    &__desc {
+      font-size: 48px;
+      line-height: 56px;
+    }
+
+    &__desc-small {
+      text-align: center;
+    }
+
+  }
+
+}
+
+@media only screen and (max-width: 488px) {
+
+  .hero {
+
+    &__form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__button {
+      margin-left: 0;
+      margin-top: 10px;
+      max-width: 173px;
+    }
+
+  }
+
+}
+
+@media only screen and (max-width: 375px) {
+
+  .hero {
+
+    &__desc {
+      max-width: 327px;
+      font-size: 32px;
+      line-height: 36px;
+    }
+
+    &__input {
+      max-width: 327px;
+    }
+
+    &__button {
+      width: 100%;
+      max-width: 327px;
+    }
+
+  }
+
+}

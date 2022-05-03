@@ -1,1 +1,147 @@
 // bu yerda footer bor
+.footer {
+  padding-top: 31px;
+  padding-bottom: 31px;
+  background: #1B262F;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__right {
+    display: flex;
+    align-items: center;
+  }
+
+  &__logo {
+    text-decoration: none;
+    margin-right: 64px;
+    flex-shrink: 0;
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.4;
+    }
+  }
+
+  &__list {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__item + &__item {
+    margin-left: 40px;
+  }
+
+  &__link {
+    text-decoration: none;
+    font-family: 'Public Sans';
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 18px;
+    color: #FBFCFE;
+    mix-blend-mode: normal;
+    opacity: 0.7;
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.4;
+    }
+  }
+
+  &__img {
+
+    &-list {
+      display: flex;
+      align-items: center;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    &-item + &-item {
+      margin-left: 24px;
+    }
+
+    &-link {
+      text-decoration: none;
+      color: white;
+      transition: all 0.4s;
+
+      &:hover {
+        color: #DA6D97;
+      }
+
+      &:active {
+        opacity: 0.4;
+      }
+    }
+
+  }
+
+}
+
+@media only screen and (max-width: 610px) {
+
+  .footer {
+
+    &__logo {
+      margin-right: 34px;
+    }
+
+    &__item + &__item {
+      margin-left: 20px;
+    }
+
+    &__img-item + &__img-item {
+      margin-left: 14px;
+    }
+
+  }
+}
+
+@media only screen and (max-width: 510px) {
+
+  .footer {
+    background-image: url(../images/Bitmap-footer.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center bottom -50px;
+    padding-top: 40px;
+    padding-bottom: 55px;
+
+    &__container {
+      flex-direction: column;
+    }
+
+    &__right {
+      flex-direction: column;
+    }
+
+    &__logo {
+      margin-bottom: 40px;
+    }
+
+    &__list {
+      flex-direction: column;
+      margin-bottom: 40px;
+    }
+
+    &__item + &__item {
+      margin-left: 0px;
+      margin-top: 30px;
+    }
+
+  }
+
+}
