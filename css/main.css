@@ -529,6 +529,15 @@ img {
   opacity: 0.4;
 }
 
+.dividing-line {
+  display: none;
+  width: 90%;
+  height: 2px;
+  background-color: #FBFCFE;
+  mix-blend-mode: normal;
+  opacity: 0.15;
+}
+
 @media only screen and (max-width: 1090px) {
   .header__button {
     margin-left: 300px;
@@ -585,9 +594,11 @@ img {
     padding-top: 140px;
     padding-bottom: 312px;
     position: absolute;
-    top: 10%;
-    width: 88%;
+    top: 0;
+    width: 80%;
+    height: 100vh;
     right: 0;
+    z-index: 99;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -605,6 +616,10 @@ img {
         -ms-flex-direction: column;
             flex-direction: column;
     margin-bottom: 32px;
+  }
+  .dividing-line {
+    display: inline-block;
+    margin-bottom: 43px;
   }
   .header--open .header__hamburger {
     background-image: url(../images/x-marks.svg);
